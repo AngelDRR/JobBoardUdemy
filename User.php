@@ -10,7 +10,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
  * @ORM\InheritanceType(value="JOINED")
- * @ORM\DiscriminatorColumn(name="type", columnDefinition="DEFAULT 'APP'")
+ * @ORM\DiscriminatorColumn(name="type", type="string", columnDefinition="DEFAULT 'APP'")
  * @ORM\DiscriminatorMap(value={"APP"="Applicant","CPY"="CompanyOwner"})
  * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
  */
